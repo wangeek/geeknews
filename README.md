@@ -1,12 +1,16 @@
-# loopback-redux-react-boilerplate
+# Geek News
 
-A boilerplate for a Redux-React application using LoopBack
+A example project for a HackerNews-like application using React + LoopBack.
+
+* React router, with hash history
+* LoopBack localstorage model
+* Sign up and login
+* Create story
+* Comment
+* LoopBack ACL based owner rules
 
 ### Get Started
-- **Clone this repository or use npm**
-```bash
-$ git clone https://github.com/tngan/loopback-redux-react-boilerplate.git
-```
+- **Clone this repository**
 
 - **Install dependencies specified in package.json**  
 ```bash
@@ -39,6 +43,4 @@ Hot reloading is only applied in development mode. In production mode, the code 
 
 [MIT](LICENSE)
 
-### Copyright
-
-Copyright (C) 2016 Tony Ngan, released under the MIT License.
+Based on Tony Ngan's [loopback-redux-react-boilerplat]( https://github.com/tngan/loopback-redux-react-boilerplate.git).
