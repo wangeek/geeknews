@@ -2,15 +2,33 @@ import 'babel-polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import SmartComponent from './containers/SmartComponent';
-import configureStore from './store/configureStore';
+import SimpleAppBar from './component/AppBar';
+import StoryList from './component/StoryList';
+import Story from './component/Story';
 
-const store = configureStore();
+import {
+  HashRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+// const store = configureStore();
+
+const Home = () => (
+  <div>
+    <StoryList>
+    </StoryList>
+  </div>
+)
 
 ReactDOM.render(
-  <Provider store={store}>
-  		<SmartComponent />
-  </Provider>,
+  <Router>
+    <div>
+      <SimpleAppBar>
+      </SimpleAppBar>
+      <Route exact path="/" component={Home} />
+      <Route path="/stories/:id" component={Story} />
+    </div>
+  </Router>,
   document.getElementById('root')
 );
